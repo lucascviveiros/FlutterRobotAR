@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/FlutterUnityIntegration/Demo/Scenes/NativeScene.unity
     guid: 93c501e08eb4d4ac2a924b592f00449b
   - enabled: 0
-    path: Assets/RobotSphere/Demo/Scenes/Robot Animations Demo.unity
+    path: Assets/LargeFiles/RobotSphere/Demo/Scenes/Robot Animations Demo.unity
     guid: 938ace6a044a848858364788d9cac322
   - enabled: 0
     path: Assets/Scenes/Main.unity
