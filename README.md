@@ -1,5 +1,5 @@
 # FlutterRobotAR
- Flutter Unity project using Augmented Reality app for iOs and Android devices
+ Flutter-Unity project using Augmented Reality in iOs and Android devices
 
 # Description
 Walking augmented reality (AR) animated-robot for elementary school logic learning
