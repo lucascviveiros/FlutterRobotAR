@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.Interaction.Toolkit.AR;
+//using UnityEngine.XR.Interaction.Toolkit.AR;
 
 public class InteractionSessionManager : MonoBehaviour
 {
-    //private List<GameObject> myDetectedPlanes = new List<GameObject>();
+    private List<GameObject> myDetectedPlanes = new List<GameObject>();
     //private List<GameObject> myDetectedPlanesV = new List<GameObject>();
     
     [SerializeField]
@@ -24,8 +24,6 @@ public class InteractionSessionManager : MonoBehaviour
     private void Awake()
     {
         //ARSessionOrigin = GameObject.FindGameObjectWithTag("ARSessionOrigem");
-        //ARPlaneManager = ARSessionOrigin.GetComponent<ARPlaneManager>();
-
         ARPlacementInteractable = GameObject.FindGameObjectWithTag("ARPlacementInteractable");
         //ARPlaneManager = ARSessionOrigin.GetComponent<ARPlaneManager>();
 
@@ -84,7 +82,7 @@ public class InteractionSessionManager : MonoBehaviour
     private void TurnOffThePlanesMesh()
     {
         ARPlaneManager.enabled = false;
-        GameObject[] arplaneVisualizer = GameObject.FindGameObjectsWithTag("ARPlaneV"); //looking for ARPlaneV tag added on planes
+        GameObject[] arplaneVisualizer = GameObject.FindGameObjectsWithTag("ARPlane"); //looking for ARPlaneV tag added on planes
 
         foreach (GameObject go in arplaneVisualizer)
         {

@@ -17,7 +17,7 @@ MonoBehaviour:
     ufoLicenseKey: QVNNL2lEYi8vLy8vQUFBQUtCRkhyTG1GVUVSenRqd0ExNjVCWGNRRUovbzB5OWtETzRWSDNzcGRaUGNaenMxcms2aTRVV1pQcFl3VzdwVXBBVkFaOTlKTnlyU0xOVFU1cWFTUGI5VEo2dERLNjJsYWEvUGw4Y1ZEbGlMUXBwcS9EcFFZMDh0V2ZBcU5teTdiVUFuRFVGNzl5RVgwR0drR0UwMjRFLzkyWnV2OTlRYVlzb2g1VEpFOS9OV1BEU2lld1ppWW8yOGk5amxzc3E0aVdJbnpVczNYdU0xQnNWNkYyZ3pGNjcrZEdlTzNYa0p6TzVOZTFQMlJDdUpzeXRBRGsvaW9lakhkUFpUTGt5b3ZRaXpIZzZTbVdqL280ZzhvclRES1dOY01LQW1KVkd6Z3lsSFpoMmNJb25GTi9Ic1R5SWNIVnRmeTBCOXpJSWF6R1Ayb0g2Rnc3QlArSWk5TzBheVZray84cUx5dGVZek1ZYVZNdm1aYnhXTko=
     delayedInitialization: 0
     cameraFocusModeSetting: 2
-    cameraDeviceModeSetting: -1
+    cameraDeviceModeSetting: -2
     maxSimultaneousImageTargets: 1
     virtualSceneScaleFactor: 1
     modelTargetRecoWhileExtendedTracked: 1
@@ -46,4 +46,4 @@ MonoBehaviour:
   webcam:
     renderTextureLayer: 30
   packageInformation:
-    ARFoundationVersion: 4.2.6
+    ARFoundationVersion: 5.0.0-pre.13

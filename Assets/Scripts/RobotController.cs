@@ -12,24 +12,47 @@ public class RobotController : MonoBehaviour
 	private Animator anim;
     private float delaySpeed = 0.33f;
 	private bool onceAnim;
-	private float angle = -90;
 	private int totalActions = 0;
 	private List<IEnumerator> actions = new List<IEnumerator>();
+	private Vector3 initialPosition;
+	private Quaternion initialRotation;
 
 	void Awake()
 	{		
 		anim = gameObject.GetComponent<Animator>();	
+		initialPosition = transform.position;
+		initialRotation = transform.rotation;
+
+		Debug.Log("Get Initial Position:" + initialPosition.ToString());
+	}
+
+	public Vector3 GetInitialPosition()
+	{
+		return initialPosition;
+	}
+
+	public Quaternion GetInitialRotation()
+	{
+		return initialRotation;
+	}
+
+	public void ReturnToInitial()
+	{
+		StopAllCoroutines();
+		actions.Clear(); //Clearing Coroutines from list
+		anim.SetBool("Roll_Anim", false);
+        anim.SetBool("Walk_Anim", false);
+		transform.position = GetInitialPosition();
+		transform.rotation = GetInitialRotation();
 	}
 
 	void Update()
 	{
-        //CheckKey();
-		//gameObject.transform.eulerAngles = rot; //Rotation
-
+		/*
 		if (Input.GetKey(KeyCode.W) && !onceAnim)
 		{
 			StartCoroutine(WalkForward());
-		}
+		}*/
 	}
 
 	public void WalkRobot()
@@ -42,11 +65,11 @@ public class RobotController : MonoBehaviour
 		onceAnim = true;
         anim.SetBool("Walk_Anim", true);
 	
-		for(int j = 0; j < 2; j++)
+		for(int j = 0; j < 2; j++) //2
 		{
-			for(int i = 0; i < 14; i++)  //14
+			for(int i = 0; i < 10; i++)  //14
         	{
-            	transform.Translate(Vector3.forward * Time.fixedDeltaTime * 6.9f); 
+            	transform.Translate(Vector3.forward * Time.fixedDeltaTime * 1f); //6.9
             	yield return new WaitForSecondsRealtime(delaySpeed); 
         	}
 		}
@@ -64,7 +87,7 @@ public class RobotController : MonoBehaviour
 		yield return new WaitForSecondsRealtime(1f);
 		this.transform.Rotate(rotationAdd);
 		anim.SetBool("Roll_Anim", false);
-		yield return new WaitForSecondsRealtime(2f);
+		yield return new WaitForSecondsRealtime(1f);
 	}
 
 	private IEnumerator WaitToTurnRight()
@@ -76,7 +99,7 @@ public class RobotController : MonoBehaviour
 		yield return new WaitForSecondsRealtime(1f);
 		this.transform.Rotate(rotationAdd);
 		anim.SetBool("Roll_Anim", false);
-		yield return new WaitForSecondsRealtime(2f);
+		yield return new WaitForSecondsRealtime(1f);
 	}
 
 	public IEnumerator StartInstrunction()
@@ -94,19 +117,19 @@ public class RobotController : MonoBehaviour
 
 	public void AddInstructionForward()
 	{
-		Debug.Log("Add Pra frente");
+		//Debug.Log("Add Pra frente");
 		actions.Add(WalkForward());
 	}
 
 	public void AddInstructionRight()
 	{
-		Debug.Log("Add Pra diretira");
+		//Debug.Log("Add Pra diretira");
 		actions.Add(WaitToTurnRight());
 	}
 
 	public void AddInstructionLeft()
 	{
-		Debug.Log("Add Pra esquerda");
+		//Debug.Log("Add Pra esquerda");
 		actions.Add(WaitToTurnLeft());
 	}
 
