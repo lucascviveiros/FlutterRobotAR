@@ -5,18 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        // mMessenger = new UnityMessageManager();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+{ 
 
     public void LoadScene(int idx)
     {
@@ -26,7 +15,6 @@ public class SceneLoader : MonoBehaviour
 
     public void MessengerFlutter()
     {
-
         UnityMessageManager.Instance.SendMessageToFlutter("Hey man");
     }
 

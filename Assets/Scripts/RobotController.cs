@@ -10,7 +10,7 @@ public class RobotController : MonoBehaviour
     private Vector3 rot = Vector3.zero;
 	private float rotSpeed = 0f;
 	private Animator anim;
-    private float delaySpeed = 0.33f;
+    private float delaySpeed = 0.22f; //0.33f
 	private bool onceAnim;
 	private int totalActions = 0;
 	private List<IEnumerator> actions = new List<IEnumerator>();
@@ -22,8 +22,7 @@ public class RobotController : MonoBehaviour
 		anim = gameObject.GetComponent<Animator>();	
 		initialPosition = transform.position;
 		initialRotation = transform.rotation;
-
-		Debug.Log("Get Initial Position:" + initialPosition.ToString());
+		//Debug.Log("Get Initial Position:" + initialPosition.ToString());
 	}
 
 	public Vector3 GetInitialPosition()
@@ -46,15 +45,6 @@ public class RobotController : MonoBehaviour
 		transform.rotation = GetInitialRotation();
 	}
 
-	void Update()
-	{
-		/*
-		if (Input.GetKey(KeyCode.W) && !onceAnim)
-		{
-			StartCoroutine(WalkForward());
-		}*/
-	}
-
 	public void WalkRobot()
 	{
 		StartCoroutine(WalkForward());
@@ -65,11 +55,11 @@ public class RobotController : MonoBehaviour
 		onceAnim = true;
         anim.SetBool("Walk_Anim", true);
 	
-		for(int j = 0; j < 2; j++) //2
+		for(int j = 0; j < 1; j++) //2 
 		{
-			for(int i = 0; i < 10; i++)  //14
+			for(int i = 0; i < 5; i++)  //14 //10
         	{
-            	transform.Translate(Vector3.forward * Time.fixedDeltaTime * 1f); //6.9
+            	transform.Translate(Vector3.forward * Time.fixedDeltaTime * 3.9f); //6.9  //1
             	yield return new WaitForSecondsRealtime(delaySpeed); 
         	}
 		}
@@ -87,7 +77,7 @@ public class RobotController : MonoBehaviour
 		yield return new WaitForSecondsRealtime(1f);
 		this.transform.Rotate(rotationAdd);
 		anim.SetBool("Roll_Anim", false);
-		yield return new WaitForSecondsRealtime(1f);
+		yield return new WaitForSecondsRealtime(2f);
 	}
 
 	private IEnumerator WaitToTurnRight()
@@ -99,7 +89,7 @@ public class RobotController : MonoBehaviour
 		yield return new WaitForSecondsRealtime(1f);
 		this.transform.Rotate(rotationAdd);
 		anim.SetBool("Roll_Anim", false);
-		yield return new WaitForSecondsRealtime(1f);
+		yield return new WaitForSecondsRealtime(2f);
 	}
 
 	public IEnumerator StartInstrunction()
