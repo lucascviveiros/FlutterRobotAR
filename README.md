@@ -16,3 +16,4 @@ Walking augmented reality (AR) animated-robot for elementary school logic learni
 - Google ARCore  5.0.0-pre 13
 - ARSubsystem  5.0.0-pre 13
 - XRLegacy Input helpers 2.1.10
+- https://github.com/juicycleff/flutter-unity-view-widget
