@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PointReached : MonoBehaviour
 {
-    [SerializeField] private Collider collider;
-    [SerializeField] private ScoreManager scoreManager; 
-    [SerializeField] private SoundManager soundManager;
-    [SerializeField] private SequenceManager sequenceManager; 
-    [SerializeField] private GameObject particleEffect;
+    private Collider collider;
+    private ScoreManager scoreManager; 
+    private SoundManager soundManager;
+    private GameObject particleEffect;
 
     private void Awake() 
     {
@@ -21,31 +20,22 @@ public class PointReached : MonoBehaviour
         collider = GetComponent<Collider>();
         scoreManager = FindObjectOfType<ScoreManager>();
         soundManager = FindObjectOfType<SoundManager>();
-        sequenceManager = FindObjectOfType<SequenceManager>();
     }
 
     private void OnTriggerEnter(Collider other) 
     {
-        Debug.Log("PointReached!_: " + other.name);   
         if (other.name == "robotSphere")
         {
             PlaySound();
             scoreManager.AddNewScore();
             ActivateParticle();
-            sequenceManager.Reset();
         }
-    }
-
-    private void OnTriggerExit(Collider other) 
-    {
-        Debug.Log("OnTriggerExit: " + other.name);   
     }
 
     private void ActivateParticle()
     {
         var particle = Instantiate(particleEffect, this.transform.position, Quaternion.identity) as GameObject;
         particle.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-
         Destroy(particle, 3f);
     }
 
