@@ -44,7 +44,6 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator WaitForNextInstruction()
     {
-        buttonGo.interactable = false;
         DisableButtonsUI();
         robotController.SetRobotInstruction();
         yield return new WaitForSecondsRealtime(2f);
