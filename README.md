@@ -1,6 +1,6 @@
 # FlutterRobotAR
  Flutter-Unity project using Augmented Reality in iOs and Android devices. 
- Under the scope of Oleachain project.
+ Under the scope of NORTE-06-3559-FSE-000188, the Oleachain project.
 
 # Description
 Walking augmented reality (AR) animated-robot for elementary school logic learning
