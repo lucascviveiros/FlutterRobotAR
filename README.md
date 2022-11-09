@@ -1,5 +1,5 @@
 # FlutterRobotAR
- Flutter-Unity project using Augmented Reality in iOs and Android devices. 
+ Flutter-Unity using Augmented Reality in iOs and Android devices. 
  Under the scope of NORTE-06-3559-FSE-000188, the Oleachain project.
 
 # Description
