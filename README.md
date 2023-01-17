@@ -1,6 +1,7 @@
 # FlutterRobotAR
- Flutter-Unity using Augmented Reality in iOs and Android devices. 
- Under the scope of NORTE-06-3559-FSE-000188, the Oleachain project.
+
+ARChildrensLogic is an augmented educational application based on Flutter/Unity framework for Android/iOS devices. 
+   - Under the scope of NORTE-06-3559-FSE-000188  project.
 
 # Description
 Walking augmented reality (AR) animated-robot for elementary school logic learning
