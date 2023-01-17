@@ -1,14 +1,15 @@
 # FlutterRobotAR
 
 ARChildrensLogic is an augmented educational application based on Flutter/Unity framework for Android/iOS devices. 
-   - Under the scope of NORTE-06-3559-FSE-000188  project.
+   - Under the scope of NORTE-06-3559-FSE-000188 OleaChain projects.
 
 # Description
-Walking augmented reality (AR) animated-robot for elementary school logic learning
+Walking in augmented reality (AR) with movimentation of an animated-robot for elementary school logic's learning.
 
-- Image targets scene by using Vuforia SDK  
-- PlaneRecognition scene by using ARFoundation: horizontal planes and ground detection
-- Spatial anchor add by hit on touchscreen devices
+- PlaneRecognition scene by using ARFoundation: horizontal planes and ground detectio
+- Spatial anchor add by hit on touchscreen devices.
+- Include image targets for devices without plane recognition feature (using Vuforia SDK).  
+
 
 # Dependencies
 
