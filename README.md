@@ -1,6 +1,6 @@
 # FlutterRobotAR
 
-ARChildrensLogic is an augmented educational application based on Flutter/Unity framework for iOS devices. 
+FlutterRobotAR is an educational AR app for teaching childrens logic based on Flutter/Unity framework for iOS devices. 
    - Under the scope of NORTE-06-3559-FSE-000188 OleaChain projects.
 
 # Description
